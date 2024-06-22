@@ -19,5 +19,7 @@ public class ProductTest extends BaseRestAssured{
                 .then().log().all()
                 .statusCode(200)
                 .extract().as(ProductRoot.class);
+
+        String title = product.getTitle();
     }
 }
