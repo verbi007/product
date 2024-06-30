@@ -54,7 +54,7 @@ public class HibernateRunner {
         return cb;
     }
 
-    public <T> T findById(Object obj, int id) {
+    public static <T> T findById(Object obj, int id) {
         return (T) HibernateRunner.getSession().get(obj.getClass(), id);
     }
 

@@ -6,5 +6,6 @@ public abstract class BaseRestAssured {
     @BeforeEach
     public void setUp() {
         RestAssured.baseURI = Constants.BASE_URL;
+        RestAssured.port = Integer.parseInt(Constants.BASE_PORT);
     }
 }
