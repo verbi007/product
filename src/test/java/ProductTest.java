@@ -32,7 +32,7 @@ public class ProductTest extends BaseRestAssured{
                 .param("product_id", "731")
                 .header("x-vkusvill-token", Constants.TOKEN)
                 .when()
-                .get(Constants.PRODUCT_URL)
+                .get(Constants.BASE_URL + Constants.PRODUCT_URL)
                 .then().log().all()
                 .statusCode(200)
                 .extract().as(ProductRoot.class);
